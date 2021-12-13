@@ -6,46 +6,13 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/13 17:20:06 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/13 17:25:19 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-typedef struct s_philo
-{
-        int id;
-        int d;
-        pthread_mutex_t *mutex;
 
-}       t_philo;
-
-typedef struct s_ret
-{
-        int d;
-}       t_ret;
-
-void    *table(void *val)
-{
-    t_philo *t;
-
-    t = (t_philo *)val;
-    if (t->id % 2)
-        usleep(200);
-    pthread_mutex_lock(&t->mutex[t->id]);
-    printf("%d has taken a fork\n", t->id + 1);
-    pthread_mutex_lock(&(t->mutex[(t->id + 1) % 3]));
-    printf("%d has taken a fork\n", t->id + 1);
-    printf("%d is eating\n", t->id + 1);
-    usleep(200 * 1000);
-    pthread_mutex_unlock(&t->mutex[t->id]);
-    pthread_mutex_unlock(&(t->mutex[(t->id + 1) % 3]));
-    printf("%d is sleeping\n", t->id + 1);
-    usleep(200 * 1000);
-    printf("%d is thinking\n", t->id + 1);
-    t->d = t->id + 10;
-    return (void *)t;
-}
 
 
 int main(int ac, char **av)
@@ -58,7 +25,7 @@ int main(int ac, char **av)
 
     if (ac != 5 && ac != 6)
     {
-        printf("waa wa waaa wa waa wa \n");
+        printf("waa ghi zid args baliz\n");
         return 1;
     }
     
@@ -79,7 +46,7 @@ int main(int ac, char **av)
     }
     for (int i = 0; i < atoi(av[1]); i++)
     {
-        pthread_create(&philo[i], NULL, table, &p[i]);
+        pthread_create(&philo[i], NULL, misa, &p[i]);
     }
     for (int i = 0; i < atoi(av[1]); i++)
     {

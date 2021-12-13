@@ -6,14 +6,11 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/13 17:25:19 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/13 17:31:37 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-
-
 
 int main(int ac, char **av)
 {

@@ -1,7 +1,7 @@
 # .PHONY: all clean fclean re
 NAME = philo
 SRC = *.c
-FLAGS = -Wall -Wextra -Werror
+FLAGS = #-Wall -Wextra -Werror
 CC = gcc
 all: $(NAME)
 $(NAME):

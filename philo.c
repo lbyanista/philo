@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/14 15:11:01 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/14 17:15:32 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main(int ac, char **av)
     pthread_t *philo;
     pthread_mutex_t *mutex;
     t_philo *p;
+    t_time *time;
     // void *r;
 
     if (ac != 5 && ac != 6)
@@ -24,7 +25,12 @@ int main(int ac, char **av)
         printf("waa ghi zid args baliz\n");
         return 1;
     }
-    
+    time = malloc(sizeof(t_time) * 200);
+    time->time_to_die = atoi(av[2]);
+    // printf("--time to reat %d--\n", time->time_to_eat);
+    time->time_to_eat = atoi(av[3]);
+    time->time_to_sleep = atoi(av[4]);
+    time->time_must_eat = atoi(av[5]);
     // int n_philo = atoi(av[1]);
     // printf("%d\n\n", n_philo);
     p = malloc(sizeof(t_philo) * atoi(av[1]));

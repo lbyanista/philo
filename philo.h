@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/13 17:25:38 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/14 17:18:37 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,19 @@ typedef struct s_philo
 
 }       t_philo;
 
-typedef struct s_ret
+// typedef struct s_ret
+// {
+//         int d;
+// }       t_ret;
+
+typedef struct s_time
 {
-        int d;
-}       t_ret;
+        int time_to_eat;
+        int time_to_sleep;
+        int time_to_die;
+        int time_must_eat;
+}       t_time;
+
 
 void    *misa(void *val);
 

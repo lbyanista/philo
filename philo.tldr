@@ -16,8 +16,8 @@
             "parentId": "page",
             "childIndex": 1,
             "point": [
-              94.45,
-              51.47
+              -75.45,
+              39.89
             ],
             "radius": [
               304.495,
@@ -39,8 +39,8 @@
             "parentId": "page",
             "childIndex": 2,
             "point": [
-              335.45,
-              557.61
+              165.55,
+              546.03
             ],
             "size": [
               132.24,
@@ -62,8 +62,8 @@
             "parentId": "page",
             "childIndex": 3,
             "point": [
-              641.75,
-              278.17
+              471.85,
+              266.59
             ],
             "size": [
               129.67,
@@ -85,8 +85,8 @@
             "parentId": "page",
             "childIndex": 4,
             "point": [
-              96.08,
-              80.68
+              -73.82,
+              69.1
             ],
             "size": [
               148.89,
@@ -108,8 +108,8 @@
             "parentId": "page",
             "childIndex": 5,
             "point": [
-              275.75,
-              562.37
+              105.85,
+              550.79
             ],
             "rotation": 0,
             "bend": -0.0009391160603597978,
@@ -157,8 +157,8 @@
             "parentId": "page",
             "childIndex": 6,
             "point": [
-              689.98,
-              433.93
+              520.08,
+              422.35
             ],
             "rotation": 0,
             "bend": -0.0009391160603597978,
@@ -208,8 +208,8 @@
             "parentId": "page",
             "childIndex": 7,
             "point": [
-              646.79,
-              373.26
+              476.89,
+              361.68
             ],
             "rotation": 0,
             "bend": 0,
@@ -257,8 +257,8 @@
             "parentId": "page",
             "childIndex": 8,
             "point": [
-              201.22,
-              56.5
+              31.32,
+              44.92
             ],
             "rotation": 0,
             "bend": 0,
@@ -306,8 +306,8 @@
             "parentId": "page",
             "childIndex": 9,
             "point": [
-              291.13,
-              224.91
+              121.23,
+              213.33
             ],
             "radius": [
               100.66499999999996,
@@ -329,8 +329,8 @@
             "parentId": "page",
             "childIndex": 10,
             "point": [
-              210.58,
-              192.93
+              40.68,
+              181.35
             ],
             "rotation": 0,
             "style": {

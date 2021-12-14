@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:24:43 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/13 17:25:09 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/14 15:04:35 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void    *misa(void *val)
 {
     t_philo *t;
-
     t = (t_philo *)val;
+    printf("--%d--\n", t->id);
     if (t->id % 2)
         usleep(200);
     pthread_mutex_lock(&t->mutex[t->id]);

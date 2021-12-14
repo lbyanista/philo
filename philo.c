@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/13 17:31:37 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/14 15:11:01 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ int main(int ac, char **av)
     pthread_t *philo;
     pthread_mutex_t *mutex;
     t_philo *p;
-    void *r;
-    int         k;
+    // void *r;
 
     if (ac != 5 && ac != 6)
     {
@@ -47,7 +46,7 @@ int main(int ac, char **av)
     }
     for (int i = 0; i < atoi(av[1]); i++)
     {
-        pthread_join(philo[i], &r);
-        // printf("philo->%d\n", i + 1);
+        pthread_join(philo[i], NULL);
+        printf("philo->%d\n", i + 1);
     }
 }

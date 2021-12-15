@@ -6,11 +6,38 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/14 17:15:32 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/15 15:26:25 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+
+int ft_isdigit(int c)
+{
+    if(c >= '0' && c <= '9')
+        return 1;
+    return 0;
+}
+
+int check_args(char **av)
+{
+    int		i;
+	int		j;
+
+	i = 0;
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j])
+        {
+			if (!ft_isdigit(av[i][j]))
+				return (1);
+            j++;
+        }
+        i++;
+	}
+	return (0);
+}
 
 int main(int ac, char **av)
 {
@@ -23,14 +50,20 @@ int main(int ac, char **av)
     if (ac != 5 && ac != 6)
     {
         printf("waa ghi zid args baliz\n");
-        return 1;
+        return (1);
     }
-    time = malloc(sizeof(t_time) * 200);
-    time->time_to_die = atoi(av[2]);
+    if (check_args(av + 1))
+    {
+        printf("dkhel valid numbers bruuh :(\n");
+        return 0;
+    }
+    
+    // time = malloc(sizeof(t_time) * 200);
+    // time->time_to_die = atoi(av[2]);
     // printf("--time to reat %d--\n", time->time_to_eat);
-    time->time_to_eat = atoi(av[3]);
-    time->time_to_sleep = atoi(av[4]);
-    time->time_must_eat = atoi(av[5]);
+    // time->time_to_eat = atoi(av[3]);
+    // time->time_to_sleep = atoi(av[4]);
+    // time->time_must_eat = atoi(av[5]);
     // int n_philo = atoi(av[1]);
     // printf("%d\n\n", n_philo);
     p = malloc(sizeof(t_philo) * atoi(av[1]));

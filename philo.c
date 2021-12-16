@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/16 12:49:08 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/16 14:53:15 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,31 +30,31 @@ int main(int ac, char **av)
         return (1);
     }
     // time = malloc(sizeof(t_time) * 200);
-    // time->time_to_die = atoi(av[2]);
+    // time->time_to_die = ft_atoi(av[2]);
     // printf("--time to reat %d--\n", time->time_to_eat);
-    // time->time_to_eat = atoi(av[3]);
-    // time->time_to_sleep = atoi(av[4]);
-    // time->time_must_eat = atoi(av[5]);
-    // int n_philo = atoi(av[1]);
+    // time->time_to_eat = ft_atoi(av[3]);
+    // time->time_to_sleep = ft_atoi(av[4]);
+    // time->time_must_eat = ft_atoi(av[5]);
+    // int n_philo = ft_atoi(av[1]);
     // printf("%d\n\n", n_philo);
-    p = malloc(sizeof(t_philo) * atoi(av[1]));
+    p = malloc(sizeof(t_philo) * ft_atoi(av[1]));
     // r = malloc(sizeof(t_ret) * 3);
-    philo = malloc(sizeof(pthread_t) * atoi(av[1]));
-    mutex = malloc(sizeof(pthread_mutex_t) * atoi(av[1]));
+    philo = malloc(sizeof(pthread_t) * ft_atoi(av[1]));
+    mutex = malloc(sizeof(pthread_mutex_t) * ft_atoi(av[1]));
     int i = 0;
-    while(i < atoi(av[1]))
+    while(i < ft_atoi(av[1]))
         pthread_mutex_init(&mutex[i++], NULL);
     i = 0;
-    while(i < atoi(av[1]))
+    while(i < ft_atoi(av[1]))
     {
         p[i].id = i;
         p[i++].mutex = mutex;
     }
     i = -1;
-    while(++i < atoi(av[1]))
+    while(++i < ft_atoi(av[1]))
         pthread_create(&philo[i], NULL, misa, &p[i]);
     i = 0;
-    while(i < atoi(av[1]))
+    while(i < ft_atoi(av[1]))
         pthread_join(philo[i++], NULL);
     return 0;
 }

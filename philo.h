@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/14 17:18:37 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/16 12:48:47 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ typedef struct s_time
 
 
 void    *misa(void *val);
+int     check_args(char **av);
 
 #endif

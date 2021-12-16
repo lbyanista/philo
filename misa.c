@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:24:43 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/15 15:05:41 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/16 12:49:05 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void    *misa(void *val)
 {
     t_philo *t;
-    t_time *time;
+    // t_time *time;
     // printf("**** from misa , time to eat %d**\n", time->time_to_eat);
     t = (t_philo *)val;
     printf("--%d--\n", t->id);

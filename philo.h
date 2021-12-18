@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/18 13:44:09 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/18 14:43:56 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ int		check_args(char **av);
 int		ft_atoi(const char *c);
 int		ft_isdigit(int c);
 void	ft_usleep(long long s_time);
+t_data	*init_data(char **av, int ac);
+t_philo	*init_philo(t_data *data);
 
 #endif

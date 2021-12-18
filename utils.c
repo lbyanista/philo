@@ -6,11 +6,29 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:50:23 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/18 13:40:41 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/18 14:42:09 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+
+int	current_time(void)
+{
+	struct timeval	tv;
+
+	gettimeofday(&tv, NULL);
+	return ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
+}
+
+void	ft_usleep(long long s_time)
+{
+	long long	start;
+
+	start = current_time();
+	usleep((s_time - 10) * 1000);
+	while ((current_time() - s_time) < start)
+		;
+}
 
 int	ft_strlen(char *str)
 {

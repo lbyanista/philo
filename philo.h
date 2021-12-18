@@ -6,12 +6,16 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/18 14:43:56 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/18 19:28:40 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H 
+# define IS_TH "is thinking"
+# define IS_SL "is sleeping"
+# define IS_EAT "is eating"
+# define TK_FRK "has taken a fork"
 
 # include <pthread.h>
 # include <stdio.h>
@@ -20,6 +24,9 @@
 # include <string.h>
 # include <sys/time.h>
 
+//s_point => (initial date (To be substracted)
+//t_at => (how many times the philosopher at)
+
 typedef struct s_data
 {
 	int				n_philo;
@@ -27,7 +34,7 @@ typedef struct s_data
 	int				time_to_eat;
 	int				time_to_sleep;
 	int				time_must_eat;
-	int				s_point; // initial date (To be substracted)
+	int				s_point;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	quill;
 	pthread_mutex_t	eat;
@@ -37,7 +44,7 @@ typedef struct s_philo
 {
 	int			id;
 	int			start_time;
-	int			t_at; // (how many times the philosopher ate)
+	int			t_at;
 	pthread_t	p;
 	t_data		*data;
 }		t_philo;

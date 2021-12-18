@@ -6,30 +6,30 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:50:23 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/16 14:49:00 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/18 13:40:41 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if(c >= '0' && c <= '9')
-        return 1;
-    return 0;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
 
-int		ft_atoi(const char *c)
+int	ft_atoi(const char *c)
 {
 	int		i;
 	int		signe;
@@ -39,7 +39,7 @@ int		ft_atoi(const char *c)
 	signe = 1;
 	r = 0;
 	while (c[i] && (c[i] == '\t' || c[i] == '\n' || c[i] == '\r' || c[i] == '\v'
-				|| c[i] == '\f' || c[i] == ' '))
+			|| c[i] == '\f' || c[i] == ' '))
 		i++;
 	if (c[i] == '-')
 		signe = -1;

@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/18 16:49:12 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/18 17:12:17 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ void	start_prog(t_data *data, t_philo *philo)
 		i += 2;
 	}
 	ft_usleep(20);
-	// i = 1;
-	// while (i < data->n_philo)
-	// {
-	// 	pthread_create(&(philo[i].p), NULL, &misa, &philo[i]);
-	// 	i += 2;
-	// }	
+	i = 1;
+	while (i < data->n_philo)
+	{
+		pthread_create(&(philo[i].p), NULL, &misa, &philo[i]);
+		i += 2;
+	}	
 }
 
 int	supervisor(t_data *data, t_philo *philo)
@@ -88,7 +88,7 @@ int	main(int ac, char **av)
 		return (printf("waa ghi zid wla n9es args baliz\n"));
 	data = init_data(av + 1, ac);
 	philo = init_philo(data);
-	printf("** n_philo = %d \n time to die = %d \n time to eat = %d\n time to sleep = %d \n time must eat = %d\n s_point= %d\n", data->n_philo, data->time_to_die, data->time_to_eat, data->time_to_sleep, data->time_must_eat, data->s_point);
+	// printf("** n_philo = %d \n time to die = %d \n time to eat = %d\n time to sleep = %d \n time must eat = %d\n s_point= %d\n", data->n_philo, data->time_to_die, data->time_to_eat, data->time_to_sleep, data->time_must_eat, data->s_point);
 	start_prog(data, philo);
 	if (supervisor(data, philo))
 		return (0);

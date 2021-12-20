@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:24:43 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/19 18:30:23 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/20 18:58:12 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 // Incrementing the eating times line 37
 // Releasing the forks line 38 39
 
-void	*misa(void *val)
+void	*routine(void *val)
 {
 	t_philo	*philo;
 

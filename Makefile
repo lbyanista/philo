@@ -1,6 +1,6 @@
 # .PHONY: all clean fclean re
 NAME = philo
-SRC = *.c
+SRC = philo.c check_args.c init.c routine.c utils.c
 FLAGS = -Wall -Wextra -Werror
 CC = gcc
 all: $(NAME)

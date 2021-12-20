@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/20 12:38:09 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/20 18:58:18 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ typedef struct s_philo
 	t_data		*data;
 }		t_philo;
 
-void	*misa(void *val);
+void	*routine(void *val);
 void	activity(int id, char *activity, pthread_mutex_t *writing, int s_time);
 int		current_time(void);
 int		check_args(char **av);

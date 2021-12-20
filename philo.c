@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/20 12:37:33 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/20 18:58:24 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	start_prog(t_data *data, t_philo *philo)
 	begin_round(philo, data->n_philo);
 	while (i < data->n_philo)
 	{
-		pthread_create(&(philo[i].p), NULL, &misa, &philo[i]);
+		pthread_create(&(philo[i].p), NULL, &routine, &philo[i]);
 		i++;
 		usleep(200);
 	}

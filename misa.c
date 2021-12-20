@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:24:43 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/18 19:28:56 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/19 18:30:23 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,23 @@ void	*misa(void *val)
 	while (1)
 	{
 		pthread_mutex_lock(&philo->data->forks[philo->id - 1]);
-		activity(philo->id, TK_FRK, &philo->data->quill, philo->data->s_point);
+		activity(philo->id, TK_FRK, &philo->data->writing,
+			philo->data->s_point);
 		pthread_mutex_lock(&philo->data->forks[philo->id % \
 			philo->data->n_philo]);
-		activity(philo->id, TK_FRK, &philo->data->quill, philo->data->s_point);
-		activity(philo->id, IS_EAT, &philo->data->quill, philo->data->s_point);
+		activity(philo->id, TK_FRK, &philo->data->writing,
+			philo->data->s_point);
+		activity(philo->id, IS_EAT, &philo->data->writing,
+			philo->data->s_point);
 		philo->start_time = current_time();
 		ft_usleep(philo->data->time_to_eat);
-		philo->t_at++;
+		philo->t_ateating++;
 		pthread_mutex_unlock(&philo->data->forks[philo->id - 1]);
 		pthread_mutex_unlock(&philo->data->forks[philo->id % \
 			philo->data->n_philo]);
-		activity(philo->id, IS_SL, &philo->data->quill, philo->data->s_point);
+		activity(philo->id, IS_SL, &philo->data->writing, philo->data->s_point);
 		ft_usleep(philo->data->time_to_sleep);
-		activity(philo->id, IS_TH, &philo->data->quill, philo->data->s_point);
+		activity(philo->id, IS_TH, &philo->data->writing, philo->data->s_point);
 	}
 	return (NULL);
 }

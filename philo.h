@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/18 19:28:40 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/20 12:38:09 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_data
 	int				time_must_eat;
 	int				s_point;
 	pthread_mutex_t	*forks;
-	pthread_mutex_t	quill;
+	pthread_mutex_t	writing;
 	pthread_mutex_t	eat;
 }		t_data;
 
@@ -44,13 +44,13 @@ typedef struct s_philo
 {
 	int			id;
 	int			start_time;
-	int			t_at;
+	int			t_ateating;
 	pthread_t	p;
 	t_data		*data;
 }		t_philo;
 
 void	*misa(void *val);
-void	activity(int id, char *activity, pthread_mutex_t *quill, int s_time);
+void	activity(int id, char *activity, pthread_mutex_t *writing, int s_time);
 int		current_time(void);
 int		check_args(char **av);
 int		ft_atoi(const char *c);

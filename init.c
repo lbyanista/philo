@@ -6,14 +6,14 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 14:43:04 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/18 19:28:26 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/20 12:37:54 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
 // initialize the writing mutex
-// pthread_mutex_init(&philo->quill, NULL);
+// pthread_mutex_init(&philo->writing, NULL);
 // pthread_mutex_init(&philo->eat, NULL);
 //*********
 // initialize the forks
@@ -37,7 +37,7 @@ t_data	*init_data(char **av, int ac)
 		philo->time_must_eat = -1;
 	philo->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t)
 			* philo->n_philo);
-	pthread_mutex_init(&philo->quill, NULL);
+	pthread_mutex_init(&philo->writing, NULL);
 	pthread_mutex_init(&philo->eat, NULL);
 	while (++i < philo->n_philo)
 		pthread_mutex_init(&(philo->forks[i]), NULL);
@@ -56,7 +56,7 @@ t_philo	*init_philo(t_data *data)
 		philo[i].id = i + 1;
 		philo[i].data = data;
 		philo[i].start_time = -2;
-		philo[i].t_at = 0;
+		philo[i].t_ateating = 0;
 	}
 	return (philo);
 }

@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/19 12:31:28 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/20 12:37:33 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void	begin_round(t_philo *philo, int t_end)
 		philo[i].start_time = philo[0].data->s_point;
 }
 
-void	activity(int id, char *activity, pthread_mutex_t *quill, int s_time)
+void	activity(int id, char *activity, pthread_mutex_t *writing, int s_time)
 {
-	pthread_mutex_lock(quill);
+	pthread_mutex_lock(writing);
 	printf("%d %d %s\n", current_time() - s_time, id, activity);
-	pthread_mutex_unlock(quill);
+	pthread_mutex_unlock(writing);
 }
 
 void	start_prog(t_data *data, t_philo *philo)
@@ -38,16 +38,23 @@ void	start_prog(t_data *data, t_philo *philo)
 	while (i < data->n_philo)
 	{
 		pthread_create(&(philo[i].p), NULL, &misa, &philo[i]);
-		i += 2;
+		i++;
+		usleep(200);
 	}
-	ft_usleep(20);
-	i = 1;
-	while (i < data->n_philo)
-	{
-		pthread_create(&(philo[i].p), NULL, &misa, &philo[i]);
-		i += 2;
-	}	
 }
+	// start round progr ^
+	// while (i < data->n_philo)
+	// {
+	// 	pthread_create(&(philo[i].p), NULL, &misa, &philo[i]);
+	// 	i += 2;
+	// }
+	// ft_usleep(20);
+	// i = 1;
+	// while (i < data->n_philo)
+	// {
+	// 	pthread_create(&(philo[i].p), NULL, &misa, &philo[i]);
+	// 	i += 2;
+	// }
 
 int	supervisor(t_data *data, t_philo *philo)
 {
@@ -62,11 +69,13 @@ int	supervisor(t_data *data, t_philo *philo)
 		{
 			if (data->time_to_die - (current_time() - philo[i].start_time) < 0)
 			{
-				printf("RIP: %d died cuz: %d passed\n", i + 1,
+				pthread_mutex_lock(&data->writing);
+				printf("RIP: philo %d died cuz: %d passed\n", i + 1,
 					(philo[i].start_time - data->s_point));
 				return (2);
 			}
-			if (data->time_must_eat > 0 && philo[i].t_at >= data->time_must_eat)
+			if (data->time_must_eat > 0 && philo[i].t_ateating >= \
+				data->time_must_eat)
 				count++;
 			if (count >= data->n_philo)
 				return (1);

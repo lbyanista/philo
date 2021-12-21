@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/21 22:52:35 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/21 23:23:04 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,20 @@ int	supervisor(t_data *data, t_philo *philo)
 	}
 }
 
+void	destroy_mutex(t_data *data)
+{
+	int	i;
+
+	i = 0;
+	pthread_mutex_destroy(&data->writing);
+	i = data->n_philo;
+	while (i >= 0)
+	{
+		pthread_mutex_destroy(&(data->forks[i]));
+		i--;
+	}
+}
+
 int	main(int ac, char **av)
 {
 	t_data	*data;
@@ -106,10 +120,7 @@ int	main(int ac, char **av)
 	data = init_data(av + 1, ac);
 	philo = init_philo(data);
 	if (data->n_philo == 0)
-	{
-		printf("Please add a philo");
-		return(-1);
-	}
+		return (printf("Please add a philo"));
 	if (start_prog(data, philo) == -1)
 		return (0);
 	if (supervisor(data, philo))
@@ -121,5 +132,6 @@ int	main(int ac, char **av)
 			return (-1);
 		usleep(100);
 	}
+	destroy_mutex(data);
 	return (0);
 }

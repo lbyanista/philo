@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/21 21:22:29 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:40:18 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
 # include <sys/time.h>
 
 //s_point => (initial date (To be substracted)

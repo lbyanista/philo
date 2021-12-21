@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/21 21:05:13 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/21 22:52:35 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,11 @@ int	main(int ac, char **av)
 		return (printf("bad args (+ or - arg) please\n"));
 	data = init_data(av + 1, ac);
 	philo = init_philo(data);
+	if (data->n_philo == 0)
+	{
+		printf("Please add a philo");
+		return(-1);
+	}
 	if (start_prog(data, philo) == -1)
 		return (0);
 	if (supervisor(data, philo))

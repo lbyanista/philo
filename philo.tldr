@@ -16,8 +16,8 @@
             "parentId": "page",
             "childIndex": 1,
             "point": [
-              -75.45,
-              39.89
+              -128.97,
+              29.32
             ],
             "radius": [
               304.495,
@@ -39,8 +39,8 @@
             "parentId": "page",
             "childIndex": 2,
             "point": [
-              167.36,
-              536.47
+              113.84,
+              525.9
             ],
             "size": [
               132.24,
@@ -62,8 +62,8 @@
             "parentId": "page",
             "childIndex": 3,
             "point": [
-              471.85,
-              266.59
+              418.33,
+              256.02
             ],
             "size": [
               129.67,
@@ -85,8 +85,8 @@
             "parentId": "page",
             "childIndex": 4,
             "point": [
-              -73.82,
-              69.1
+              -127.34,
+              58.53
             ],
             "size": [
               148.89,
@@ -108,8 +108,8 @@
             "parentId": "page",
             "childIndex": 5,
             "point": [
-              105.85,
-              550.79
+              52.33,
+              540.22
             ],
             "rotation": 0,
             "bend": -0.0009391160603597978,
@@ -157,8 +157,8 @@
             "parentId": "page",
             "childIndex": 6,
             "point": [
-              520.08,
-              422.35
+              466.56,
+              411.78
             ],
             "rotation": 0,
             "bend": -0.0009391160603597978,
@@ -208,8 +208,8 @@
             "parentId": "page",
             "childIndex": 7,
             "point": [
-              476.89,
-              361.68
+              423.37,
+              351.11
             ],
             "rotation": 0,
             "bend": 0,
@@ -257,8 +257,8 @@
             "parentId": "page",
             "childIndex": 8,
             "point": [
-              31.32,
-              44.92
+              -22.2,
+              34.35
             ],
             "rotation": 0,
             "bend": 0,
@@ -306,8 +306,8 @@
             "parentId": "page",
             "childIndex": 9,
             "point": [
-              121.23,
-              213.33
+              67.71,
+              202.76
             ],
             "radius": [
               100.66499999999996,
@@ -329,8 +329,8 @@
             "parentId": "page",
             "childIndex": 10,
             "point": [
-              40.68,
-              181.35
+              -12.84,
+              170.78
             ],
             "rotation": 0,
             "style": {
@@ -1891,7 +1891,7 @@
               "dash": "draw",
               "scale": 1
             },
-            "isLocked": true
+            "isLocked": false
           },
           "fc0b5873-3f77-4e84-190d-4c877bc805f0": {
             "id": "fc0b5873-3f77-4e84-190d-4c877bc805f0",
@@ -1900,8 +1900,8 @@
             "parentId": "page",
             "childIndex": 12,
             "point": [
-              -542.04,
-              -241.68
+              -595.56,
+              -252.25
             ],
             "rotation": 0,
             "bend": 0,
@@ -1923,8 +1923,7 @@
                   0,
                   0
                 ],
-                "canBind": true,
-                "bindingId": "7a3e84ed-4d7b-4ae4-1ae9-e754e110419c"
+                "canBind": true
               },
               "bend": {
                 "id": "bend",
@@ -1951,8 +1950,8 @@
             "parentId": "page",
             "childIndex": 13,
             "point": [
-              -68.73,
-              -117.48
+              -122.25,
+              -128.05
             ],
             "rotation": 0,
             "bend": 0,
@@ -1974,8 +1973,7 @@
                   0,
                   0
                 ],
-                "canBind": true,
-                "bindingId": "e5bec6ee-a47f-4c5d-1865-cc6039728b04"
+                "canBind": true
               },
               "bend": {
                 "id": "bend",
@@ -2002,8 +2000,8 @@
             "parentId": "page",
             "childIndex": 14,
             "point": [
-              -240.98,
-              -117.48
+              -294.5,
+              -128.05
             ],
             "rotation": 0,
             "bend": 0,
@@ -2025,8 +2023,7 @@
                   0,
                   0
                 ],
-                "canBind": true,
-                "bindingId": "790bb2dd-cf2c-4647-2234-2d23b4ffe34b"
+                "canBind": true
               },
               "bend": {
                 "id": "bend",
@@ -2053,8 +2050,8 @@
             "parentId": "page",
             "childIndex": 15,
             "point": [
-              -583.27,
-              -291.8
+              -636.79,
+              -302.37
             ],
             "rotation": 0,
             "bend": 0,
@@ -2102,8 +2099,8 @@
             "parentId": "page",
             "childIndex": 16,
             "point": [
-              -16.91,
-              -236.68
+              -70.43,
+              -247.25
             ],
             "rotation": 0,
             "style": {
@@ -2379,8 +2376,8 @@
             "parentId": "page",
             "childIndex": 17,
             "point": [
-              -92.7,
-              -244.92
+              -146.22,
+              -255.49
             ],
             "rotation": 0,
             "style": {
@@ -2681,10 +2678,8 @@
             "parentId": "page",
             "childIndex": 18,
             "point": [
-              -94.51,
-              -282.17,
-              0.5,
-              0.5
+              -148.03,
+              -292.74
             ],
             "rotation": 0,
             "style": {
@@ -2722,78 +2717,6 @@
               0.61
             ],
             "distance": 8
-          },
-          "36ab9fa2-3b9b-40eb-29dc-c6f0f9eee107": {
-            "id": "36ab9fa2-3b9b-40eb-29dc-c6f0f9eee107",
-            "type": "arrow",
-            "fromId": "fc0b5873-3f77-4e84-190d-4c877bc805f0",
-            "toId": "63e3f3c0-c6cb-45e8-066d-a79a45dfb5d2",
-            "handleId": "start",
-            "point": [
-              0.5,
-              0.5
-            ],
-            "distance": 16
-          },
-          "7a3e84ed-4d7b-4ae4-1ae9-e754e110419c": {
-            "id": "7a3e84ed-4d7b-4ae4-1ae9-e754e110419c",
-            "type": "arrow",
-            "fromId": "fc0b5873-3f77-4e84-190d-4c877bc805f0",
-            "toId": "63e3f3c0-c6cb-45e8-066d-a79a45dfb5d2",
-            "handleId": "end",
-            "point": [
-              0.5,
-              0.5
-            ],
-            "distance": 16
-          },
-          "0209e1b6-2547-4e8d-275e-0b739553c867": {
-            "id": "0209e1b6-2547-4e8d-275e-0b739553c867",
-            "type": "arrow",
-            "fromId": "a9f73b68-feb0-4e51-1d23-90c16f388f90",
-            "toId": "63e3f3c0-c6cb-45e8-066d-a79a45dfb5d2",
-            "handleId": "start",
-            "point": [
-              0.5,
-              0.5
-            ],
-            "distance": 16
-          },
-          "e5bec6ee-a47f-4c5d-1865-cc6039728b04": {
-            "id": "e5bec6ee-a47f-4c5d-1865-cc6039728b04",
-            "type": "arrow",
-            "fromId": "a9f73b68-feb0-4e51-1d23-90c16f388f90",
-            "toId": "63e3f3c0-c6cb-45e8-066d-a79a45dfb5d2",
-            "handleId": "end",
-            "point": [
-              0.5,
-              0.5
-            ],
-            "distance": 16
-          },
-          "5930a1f8-bbb2-43a2-0e3a-bfc4d988da19": {
-            "id": "5930a1f8-bbb2-43a2-0e3a-bfc4d988da19",
-            "type": "arrow",
-            "fromId": "a04a8617-9594-4c6d-2480-1447aa20bdee",
-            "toId": "63e3f3c0-c6cb-45e8-066d-a79a45dfb5d2",
-            "handleId": "start",
-            "point": [
-              0.5,
-              0.5
-            ],
-            "distance": 16
-          },
-          "790bb2dd-cf2c-4647-2234-2d23b4ffe34b": {
-            "id": "790bb2dd-cf2c-4647-2234-2d23b4ffe34b",
-            "type": "arrow",
-            "fromId": "a04a8617-9594-4c6d-2480-1447aa20bdee",
-            "toId": "63e3f3c0-c6cb-45e8-066d-a79a45dfb5d2",
-            "handleId": "end",
-            "point": [
-              0.5,
-              0.5
-            ],
-            "distance": 16
           }
         }
       }

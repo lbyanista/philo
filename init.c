@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 14:43:04 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/20 12:37:54 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:17:22 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ t_data	*init_data(char **av, int ac)
 	philo->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t)
 			* philo->n_philo);
 	pthread_mutex_init(&philo->writing, NULL);
-	pthread_mutex_init(&philo->eat, NULL);
 	while (++i < philo->n_philo)
 		pthread_mutex_init(&(philo->forks[i]), NULL);
 	return (philo);

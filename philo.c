@@ -6,21 +6,21 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:19:55 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/20 18:58:24 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:05:13 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	begin_round(t_philo *philo, int t_end)
-{
-	int	i;
+// void	begin_round(t_philo *philo, int t_end)
+// {
+// 	int	j;
 
-	i = -1;
-	philo[0].data->s_point = current_time();
-	while (++i < t_end)
-		philo[i].start_time = philo[0].data->s_point;
-}
+// 	j = -1;
+// 	philo[0].data->s_point = current_time();
+// 	while (++j < t_end)
+// 		philo[j].start_time = philo[0].data->s_point;
+// }
 
 void	activity(int id, char *activity, pthread_mutex_t *writing, int s_time)
 {
@@ -29,18 +29,26 @@ void	activity(int id, char *activity, pthread_mutex_t *writing, int s_time)
 	pthread_mutex_unlock(writing);
 }
 
-void	start_prog(t_data *data, t_philo *philo)
+	// begin_round(philo, data->n_philo) 40;
+
+int	start_prog(t_data *data, t_philo *philo)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	begin_round(philo, data->n_philo);
+	j = -1;
+	philo[0].data->s_point = current_time();
+	while (++j < data->n_philo)
+		philo[j].start_time = philo[0].data->s_point;
 	while (i < data->n_philo)
 	{
-		pthread_create(&(philo[i].p), NULL, &routine, &philo[i]);
+		if (pthread_create(&(philo[i].p), NULL, &routine, &philo[i]) != 0)
+			return (-1);
 		i++;
 		usleep(200);
 	}
+	return (1);
 }
 	// start round progr ^
 	// while (i < data->n_philo)
@@ -92,18 +100,20 @@ int	main(int ac, char **av)
 	int		i;
 
 	if (check_args(av + 1))
-		return (printf("dkhel valid numbers bruuh :(\n"));
+		return (printf("enter a valid number's :(\n"));
 	if (ac != 5 && ac != 6)
-		return (printf("waa ghi zid wla n9es args baliz\n"));
+		return (printf("bad args (+ or - arg) please\n"));
 	data = init_data(av + 1, ac);
 	philo = init_philo(data);
-	start_prog(data, philo);
+	if (start_prog(data, philo) == -1)
+		return (0);
 	if (supervisor(data, philo))
 		return (0);
 	i = -1;
 	while (++i != data->n_philo)
 	{
-		pthread_join(philo[i].p, NULL);
+		if (pthread_join(philo[i].p, NULL) != 0)
+			return (-1);
 		usleep(100);
 	}
 	return (0);

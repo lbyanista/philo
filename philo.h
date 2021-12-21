@@ -6,7 +6,7 @@
 /*   By: mlabrayj <mlabrayj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:16:41 by mlabrayj          #+#    #+#             */
-/*   Updated: 2021/12/20 18:58:18 by mlabrayj         ###   ########.fr       */
+/*   Updated: 2021/12/21 21:22:29 by mlabrayj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ typedef struct s_data
 	int				s_point;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	writing;
-	pthread_mutex_t	eat;
 }		t_data;
 
 typedef struct s_philo
